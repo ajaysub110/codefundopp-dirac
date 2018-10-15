@@ -1,12 +1,17 @@
 package com.example.ajays.dirac;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.ajays.dirac.Chat.ChatActivity;
 
 import java.util.ArrayList;
 
@@ -14,6 +19,7 @@ public class ChoiceActivity extends Activity {
 
     TextView choice_activity_tv;
     RecyclerView choice_activity_rv;
+    Button choice_activity_btn;
     ArrayList<ChoiceModel> choice_list = new ArrayList<>();
     ChoiceAdapter choice_activity_rv_adapter;
 
@@ -24,6 +30,15 @@ public class ChoiceActivity extends Activity {
 
         choice_activity_tv = (TextView)findViewById(R.id.activity_choice_title);
         choice_activity_rv = (RecyclerView)findViewById(R.id.activity_choice_list);
+        choice_activity_btn = (Button) findViewById(R.id.activity_choice_button);
+
+        choice_activity_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChoiceActivity.this,ChatActivity.class);
+                startActivity(intent);
+            }
+        });
 
         for(int i=1;i<=10;i+=1){
             choice_list.add(new ChoiceModel("Name "+ i,"Time "+i,
