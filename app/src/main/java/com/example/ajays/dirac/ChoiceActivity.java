@@ -19,7 +19,6 @@ public class ChoiceActivity extends Activity {
 
     TextView choice_activity_tv;
     RecyclerView choice_activity_rv;
-    Button choice_activity_btn;
     ArrayList<ChoiceModel> choice_list = new ArrayList<>();
     ChoiceAdapter choice_activity_rv_adapter;
 
@@ -30,15 +29,6 @@ public class ChoiceActivity extends Activity {
 
         choice_activity_tv = (TextView)findViewById(R.id.activity_choice_title);
         choice_activity_rv = (RecyclerView)findViewById(R.id.activity_choice_list);
-        choice_activity_btn = (Button) findViewById(R.id.activity_choice_button);
-
-        choice_activity_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChoiceActivity.this,ChatActivity.class);
-                startActivity(intent);
-            }
-        });
 
         for(int i=1;i<=10;i+=1){
             choice_list.add(new ChoiceModel("Name "+ i,"Time "+i,
@@ -49,7 +39,7 @@ public class ChoiceActivity extends Activity {
                 false));
         choice_activity_rv.setHasFixedSize(true);
 
-        choice_activity_rv_adapter = new ChoiceAdapter(choice_list);
+        choice_activity_rv_adapter = new ChoiceAdapter(this,choice_list);
         choice_activity_rv.setAdapter(choice_activity_rv_adapter);
 
     }

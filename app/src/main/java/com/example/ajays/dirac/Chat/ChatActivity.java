@@ -1,11 +1,14 @@
 package com.example.ajays.dirac.Chat;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.example.ajays.dirac.ChoiceModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,9 +20,10 @@ import com.scaledrone.lib.Scaledrone;
 
 import com.example.ajays.dirac.R;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class ChatActivity extends AppCompatActivity implements RoomListener {
+public class ChatActivity extends Activity implements RoomListener {
 
     private String channelID = "iR8hQnsDybnggx0i";
     private String roomName = "observable-room";
@@ -27,13 +31,18 @@ public class ChatActivity extends AppCompatActivity implements RoomListener {
     private Scaledrone scaledrone;
     private MessageAdapter messageAdapter;
     private ListView messagesView;
+    private ChoiceModel contactObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        // This is where we write the mesage
+        // This is where we write the message
         editText = (EditText) findViewById(R.id.editText);
+
+        contactObject = (ChoiceModel)this.getIntent().getSerializableExtra("contact");
+
+        Toast.makeText(this, contactObject.getChoice_name(), Toast.LENGTH_SHORT).show();
 
         messageAdapter = new MessageAdapter(this);
         messagesView = (ListView) findViewById(R.id.messages_view);
