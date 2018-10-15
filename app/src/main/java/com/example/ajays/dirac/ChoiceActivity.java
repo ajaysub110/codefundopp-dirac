@@ -1,12 +1,17 @@
 package com.example.ajays.dirac;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.ajays.dirac.Forum.ForumMain;
 
 import java.util.ArrayList;
 
@@ -36,6 +41,16 @@ public class ChoiceActivity extends Activity {
 
         choice_activity_rv_adapter = new ChoiceAdapter(choice_list);
         choice_activity_rv.setAdapter(choice_activity_rv_adapter);
+
+        Button tmp =  findViewById(R.id.tmp);
+
+        tmp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChoiceActivity.this,ForumMain.class));
+            }
+        });
+
 
     }
 }
