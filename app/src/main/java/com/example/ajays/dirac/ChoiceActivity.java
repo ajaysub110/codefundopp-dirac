@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ajays.dirac.Forum.ForumMain;
+import com.example.ajays.dirac.Chat.ChatActivity;
 
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class ChoiceActivity extends Activity {
                 false));
         choice_activity_rv.setHasFixedSize(true);
 
-        choice_activity_rv_adapter = new ChoiceAdapter(choice_list);
+        choice_activity_rv_adapter = new ChoiceAdapter(this,choice_list);
         choice_activity_rv.setAdapter(choice_activity_rv_adapter);
 
         Button tmp =  findViewById(R.id.tmp);

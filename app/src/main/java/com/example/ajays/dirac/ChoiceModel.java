@@ -1,6 +1,8 @@
 package com.example.ajays.dirac;
 
-public class ChoiceModel {
+import java.io.Serializable;
+
+public class ChoiceModel implements Serializable {
     String choice_name;
     String time_of_last;
     String text_of_last;
