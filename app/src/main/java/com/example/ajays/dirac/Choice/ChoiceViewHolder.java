@@ -1,4 +1,4 @@
-package com.example.ajays.dirac;
+package com.example.ajays.dirac.Choice;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ajays.dirac.Chat.ChatActivity;
+import com.example.ajays.dirac.R;
 
 public class ChoiceViewHolder extends RecyclerView.ViewHolder{
     TextView item_choice_tv1;

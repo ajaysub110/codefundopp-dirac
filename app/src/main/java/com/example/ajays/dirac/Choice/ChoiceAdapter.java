@@ -1,25 +1,27 @@
-package com.example.ajays.dirac;
+package com.example.ajays.dirac.Choice;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ajays.dirac.Chat.ChatActivity;
+import com.example.ajays.dirac.Forum.ForumActivity;
+import com.example.ajays.dirac.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceViewHolder> {
     private ArrayList<ChoiceModel> choiceModel;
     private Context context;
+    private Integer page;
 
-    public ChoiceAdapter(Context context, ArrayList<ChoiceModel> choiceModel){
+    public ChoiceAdapter(Context context, ArrayList<ChoiceModel> choiceModel,Integer mPage){
         this.choiceModel = choiceModel;
         this.context = context;
+        this.page = mPage;
     }
 
     @Override
@@ -39,8 +41,16 @@ public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceViewHolder> {
         holder.item_choice_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,ChatActivity.class);
-                intent.putExtra("contact",choiceModel.get(position));
+                Intent intent = new Intent();
+                switch (page){
+                    case 1:
+                        intent = new Intent(context,ChatActivity.class);
+                        break;
+                    case 2:
+                        intent = new Intent(context,ForumActivity.class);
+                        break;
+                }
+                intent.putExtra("chatOrForumChosen",choiceModel.get(position));
                 context.startActivity(intent);
             }
         });

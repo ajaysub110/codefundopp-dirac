@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.ajays.dirac.ChoiceModel;
+import com.example.ajays.dirac.Choice.ChoiceModel;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,7 +20,6 @@ import com.scaledrone.lib.Scaledrone;
 
 import com.example.ajays.dirac.R;
 
-import java.io.Serializable;
 import java.util.Random;
 
 public class ChatActivity extends Activity implements RoomListener {
@@ -40,7 +39,7 @@ public class ChatActivity extends Activity implements RoomListener {
         // This is where we write the message
         editText = (EditText) findViewById(R.id.editText);
 
-        contactObject = (ChoiceModel)this.getIntent().getSerializableExtra("contact");
+        contactObject = (ChoiceModel)this.getIntent().getSerializableExtra("chatOrForumChosen");
 
         Toast.makeText(this, contactObject.getChoice_name(), Toast.LENGTH_SHORT).show();
 
