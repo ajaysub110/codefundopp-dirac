@@ -11,6 +11,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.ajays.dirac.Forum.ForumMain;
 import com.example.ajays.dirac.Chat.ChatActivity;
 
 import java.util.ArrayList;
@@ -41,6 +42,16 @@ public class ChoiceActivity extends Activity {
 
         choice_activity_rv_adapter = new ChoiceAdapter(this,choice_list);
         choice_activity_rv.setAdapter(choice_activity_rv_adapter);
+
+        Button tmp =  findViewById(R.id.tmp);
+
+        tmp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChoiceActivity.this,ForumMain.class));
+            }
+        });
+
 
     }
 }

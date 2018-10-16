@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ChoiceActivity">
+    tools:context=".Forum.ForumMain">
 
     <TextView
-        android:id="@+id/activity_choice_title"
+        android:id="@+id/forum_main_title"
         android:layout_width="match_parent"
         android:background="@color/colorPrimary"
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:textColor="#FFFFFF"
-        android:text="Chats"
+        android:text="Forum"
         android:textSize="30dp"
         android:textStyle="bold"/>
 
@@ -21,13 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
-    <Button
-        android:id="@+id/tmp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
+
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/activity_choice_list"
+        android:id="@+id/forum_main_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </android.support.v7.widget.RecyclerView>

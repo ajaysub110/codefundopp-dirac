@@ -19,6 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Forum.ForumMain"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Forum.PostPop" android:theme="@style/AppTheme.CustomTheme"></activity>
         <activity android:name=".Chat.ChatActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar">
         </activity>
