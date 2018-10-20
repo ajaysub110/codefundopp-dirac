@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "843590320571",
+    "firebase_url": "https://codefundopp-dirac.firebaseio.com",
+    "project_id": "codefundopp-dirac",
+    "storage_bucket": "codefundopp-dirac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843590320571:android:46fdded1f56e67d8",
+        "android_client_info": {
+          "package_name": "com.example.ajays.dirac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843590320571-pijl5b0gnjbvavnsb23kcimtai30ch79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ajays.dirac",
+            "certificate_hash": "86e7b959851fc1e19e0a00b448db084a9b36356e"
+          }
+        },
+        {
+          "client_id": "843590320571-g43c8p7dmfjc0ud5o4s8un3o48uld43m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgxsbDfKj5ITDmJvx-LNcUaJAGwRtv-2I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843590320571-g43c8p7dmfjc0ud5o4s8un3o48uld43m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

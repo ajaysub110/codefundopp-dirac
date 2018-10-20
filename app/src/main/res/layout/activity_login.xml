@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/username_layout"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/username_layout"
+        android:id="@+id/password_layout">
+
+        <TextView
+            android:id="@+id/password_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/password_layout"
+        android:id="@+id/region_layout">
+
+        <TextView
+            android:id="@+id/region_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Region:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/region_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/region_layout"
+        android:id="@+id/auth_layout">
+
+        <TextView
+            android:id="@+id/auth_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Authority?"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/auth_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/auth_layout"
+        android:layout_marginTop="20dp"
+        android:text="LOGIN"/>
+
+</RelativeLayout>

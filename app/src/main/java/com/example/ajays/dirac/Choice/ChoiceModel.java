@@ -3,9 +3,9 @@ package com.example.ajays.dirac.Choice;
 import java.io.Serializable;
 
 public class ChoiceModel implements Serializable {
-    String choice_name;
     String time_of_last;
     String text_of_last;
+    String choice_name;
 
     public ChoiceModel(){}
 
