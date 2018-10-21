@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ajays.dirac.Choice.ChoiceFragment">
+    <item
+        android:id="@+id/resource_allocation_button"
+        app:showAsAction="always"
+        android:title="Resource Allocation"
+         />
+</menu>

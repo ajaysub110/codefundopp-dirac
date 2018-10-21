@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="resource_types">
+        <item>Food</item>
+        <item>Medical</item>
+        <item>Other Necessities</item>
+
+    </string-array>
+</resources>

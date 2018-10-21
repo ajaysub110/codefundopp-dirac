@@ -24,13 +24,24 @@
             android:theme="@style/AppTheme.CustomTheme" />
         <activity
             android:name=".Chat.ChatActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ResourceAllocation.ResourcesActivity"
+            android:label="@string/title_activity_resources"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        ><activity android:name=".ResourceAllocation.ResourceAddPop"
+        android:label="ResourceAddPop"
+        android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity android:name=".ResourceAllocation.PopulationAddPop"
+            android:label="PopulationAddPop"
+            android:theme="@style/AppTheme.CustomTheme"></activity>
     </application>
 
 </manifest>
