@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">DiRAC</string>
     <string name="chat_text_input_placeholder">Write a message</string>
+    <string name="write_a_comment">Write a comment</string>
 </resources>

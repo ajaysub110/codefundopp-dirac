@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.ajays.dirac.Post.PostActivity;
 import com.example.ajays.dirac.R;
 
 import java.util.ArrayList;
@@ -44,13 +45,15 @@ public class ForumAdapter extends RecyclerView.Adapter<ForumViewHolder>{
             @Override
             public void onClick(View v) {
                 holder.forum_post_upvote.setColorFilter(context.getResources().getColor(R.color.colorSecondary));
+                // TODO: Increase upvote number in database
             }
         });
 
-        holder.forum_post_cardview.setOnClickListener(new View.OnClickListener() {
+        holder.forum_post_comments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Connects to a specific forum post
+                Intent intent = new Intent(context,PostActivity.class);
+                context.startActivity(intent);
             }
         });
     }

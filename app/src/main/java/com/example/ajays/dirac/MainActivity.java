@@ -1,5 +1,6 @@
 package com.example.ajays.dirac;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.ajays.dirac.Choice.ChoiceFragmentPagerAdapter;
+import com.example.ajays.dirac.Login.LoginActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,10 +26,14 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sp=this.getSharedPreferences("login", MODE_PRIVATE);
 
         username=sp.getString("username", null);
+        if (username==null){
+            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
         region = sp.getString("region",null);
         auth = sp.getInt("auth",0);
 
-        //Toast.makeText(this, username+' '+region+' '+auth, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, username+' '+region+' '+auth, Toast.LENGTH_SHORT).show();
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new ChoiceFragmentPagerAdapter(getSupportFragmentManager(),MainActivity.this));

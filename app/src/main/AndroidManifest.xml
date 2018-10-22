@@ -14,8 +14,6 @@
         <activity android:name=".Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -27,9 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Forum.PostPop"
-            android:theme="@style/AppTheme.CustomTheme" />
-        <activity
             android:name=".Chat.ChatActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity android:name=".MainActivity">
@@ -37,8 +32,10 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Post.PostActivity"></activity>
     </application>
 
 </manifest>
