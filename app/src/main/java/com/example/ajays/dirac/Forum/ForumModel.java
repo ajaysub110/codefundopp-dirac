@@ -5,6 +5,8 @@ public class ForumModel {
     String post_description;
     Integer num_upvotes;
 
+    public ForumModel(){}
+
     public ForumModel(String post_title, String post_description, Integer num_upvotes) {
 
         this.post_title = post_title;

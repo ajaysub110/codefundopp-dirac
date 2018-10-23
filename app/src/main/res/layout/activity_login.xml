@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:id="@+id/username_layout"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="90dp">
 
         <TextView
             android:id="@+id/username_tv"
@@ -94,12 +94,34 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/auth_layout"
+        android:id="@+id/designation_layout">
+
+        <TextView
+            android:id="@+id/designation_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Designation:"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/designation_et"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/auth_layout"
+        android:layout_below="@id/designation_layout"
         android:layout_marginTop="20dp"
         android:text="LOGIN"/>
 

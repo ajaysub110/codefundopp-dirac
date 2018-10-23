@@ -13,15 +13,14 @@ import com.example.ajays.dirac.R;
 public class ChoiceViewHolder extends RecyclerView.ViewHolder{
     TextView item_choice_tv1;
     TextView item_choice_tv2;
-    TextView item_choice_tv3;
+
     LinearLayout item_choice_layout;
 
     public ChoiceViewHolder(@NonNull final View itemView) {
         super(itemView);
 
         item_choice_tv1 = itemView.findViewById(R.id.item_choice_name);
-        item_choice_tv2 = itemView.findViewById(R.id.item_choice_time);
-        item_choice_tv3 = itemView.findViewById(R.id.item_choice_text);
+        item_choice_tv2 = itemView.findViewById(R.id.item_choice_description);
         item_choice_layout = itemView.findViewById(R.id.item_choice_layout);
 
     }

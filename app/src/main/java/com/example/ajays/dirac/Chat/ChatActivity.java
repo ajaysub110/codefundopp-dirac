@@ -39,7 +39,7 @@ public class ChatActivity extends Activity implements RoomListener {
         // This is where we write the message
         editText = (EditText) findViewById(R.id.editText);
 
-        contactObject = (ChoiceModel)this.getIntent().getSerializableExtra("chatOrForumChosen");
+        contactObject = (ChoiceModel) this.getIntent().getSerializableExtra("chatOrForumChosen");
 
         Toast.makeText(this, contactObject.getChoice_name(), Toast.LENGTH_SHORT).show();
 

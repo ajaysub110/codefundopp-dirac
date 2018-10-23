@@ -35,8 +35,7 @@ public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceViewHolder> {
     @Override
     public void onBindViewHolder(ChoiceViewHolder holder, final int position) {
         holder.item_choice_tv1.setText(choiceModel.get(position).getChoice_name());
-        holder.item_choice_tv2.setText(choiceModel.get(position).getTime_of_last());
-        holder.item_choice_tv3.setText(choiceModel.get(position).getText_of_last());
+        holder.item_choice_tv2.setText(choiceModel.get(position).getDescription());
 
         holder.item_choice_layout.setOnClickListener(new View.OnClickListener() {
             @Override
