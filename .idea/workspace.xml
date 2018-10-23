@@ -37,17 +37,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Chat/ChatActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Chat/ChatActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceViewHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Login/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_choice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_choice.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_choice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_choice.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,11 +61,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChoiceFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java">
+      <file leaf-file-name="ForumAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="88" column="82" lean-forward="true" selection-start-line="88" selection-start-column="82" selection-end-line="88" selection-end-column="82" />
+              <folding>
+                <element signature="e#3405#3406#0" expanded="true" />
+                <element signature="e#3445#3446#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="72" column="83" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="83" />
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -82,23 +86,10 @@
       <file leaf-file-name="ForumActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+            <state relative-caret-position="203">
+              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForumModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding>
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#788#789#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2406,14 +2397,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumViewHolder.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_forum_post.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_upward_blue_24dp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_add_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragmentPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_post.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_comment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Post/PostActivity.java" />
@@ -2431,6 +2420,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java" />
       </list>
     </option>
   </component>
@@ -2489,6 +2480,12 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="codefundopp-dirac" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="codefundopp-dirac" type="1abcf292:AndroidViewProjectNode" />
@@ -2675,7 +2672,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" x="0" y="57" width="1366" height="658" id="Logcat" order="10" type="WINDOWED" visible="true" weight="0.32854578" />
+      <window_info anchor="bottom" x="0" y="57" width="1366" height="658" id="Logcat" order="10" type="WINDOWED" weight="0.32854578" />
       <window_info id="Captures" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="2" />
@@ -2758,13 +2755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -2873,13 +2863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Chat/MessageAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-390">
@@ -2926,13 +2909,6 @@
       </provider>
       <provider editor-type-id="android-manifest">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Chat/ChatActivity.java">
@@ -3024,13 +3000,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-165">
+          <caret line="83" column="29" lean-forward="true" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -3038,17 +3018,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
           <folding>
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Choice/ChoiceFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ajays/dirac/Forum/ForumAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="72" column="83" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="83" />
+        <state relative-caret-position="277">
+          <caret line="88" column="82" lean-forward="true" selection-start-line="88" selection-start-column="82" selection-end-line="88" selection-end-column="82" />
+          <folding>
+            <element signature="e#3405#3406#0" expanded="true" />
+            <element signature="e#3445#3446#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
