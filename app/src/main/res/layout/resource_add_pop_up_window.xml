@@ -43,13 +43,25 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Quantity"/>
-    <EditText
-        android:id="@+id/resource_region"
+    <TextView
+        android:id="@+id/tier_text"
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Region"/>
+        android:text="TIER 1-DIRE SHORTAGE(ABSOLUTELY NECESSARY)\n
+TIER 2-SHORTAGE(REQUIRED IN THE NEAR FUTURE)\n
+TIER 3-MIGHT RUN OUT SOON"
+        />
+    <EditText
+        android:visibility="invisible"
+        android:id="@+id/resource_tier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Tier"/>
 
     <Button
         android:id="@+id/resource_submit_button"

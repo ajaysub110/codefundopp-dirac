@@ -34,10 +34,7 @@ public class ForumActivity extends Activity {
         Toast.makeText(this, forumObject.getChoice_name(), Toast.LENGTH_SHORT).show();
 
         for(int i=0;i<30;i++){
-            if(i==15){ forum_list.add(new ForumModel("This is a very very very very very very very lonooooooooooooooooooooooong post title text" + i,i,3));
-                       continue;}
-            forum_list.add(new ForumModel("Post Title " + i,i,0));
-
+            forum_list.add(new ForumModel("Post Title " + i,"Description "+i,0));
         }
 
         forum_main_rv.setLayoutManager(new LinearLayoutManager(ForumActivity.this,LinearLayoutManager.VERTICAL,false));
@@ -45,24 +42,6 @@ public class ForumActivity extends Activity {
 
         forum_main_rv_adapter = new ForumAdapter(this,forum_list);
         forum_main_rv.setAdapter(forum_main_rv_adapter);
-/*
-        forum_main_rv_adapter.setOnItem_click_listener(new ForumAdapter.Item_click_listener() {
-            @Override
-            public void onUpvoteClick(int position) {
-                int n= (Integer.parseInt(forum_list.get(position).num_upvotes)) ;
-                n+=1;
-                Toast.makeText(ForumActivity.this, "CLICKED", Toast.LENGTH_LONG).show();
-                forum_list.get(position).num_upvotes=Integer.toString(n);
-            }
-
-            @Override
-            public void onPostClick(int position) {
-
-            }
-        });
-*/
-
-
     }
 
 }

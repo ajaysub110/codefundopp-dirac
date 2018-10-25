@@ -7,8 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.ajays.dirac.Post.PostActivity;
 import com.example.ajays.dirac.R;
 
 import java.util.ArrayList;
@@ -36,30 +38,24 @@ public class ForumAdapter extends RecyclerView.Adapter<ForumViewHolder>{
     @Override
     public void onBindViewHolder(ForumViewHolder holder, int i) {
         holder.forum_post_title.setText(forumModel.get(i).getPost_title());
-        holder.forum_post_num_replies.setText(forumModel.get(i).getNum_replies().toString());
+        holder.forum_post_description.setText(forumModel.get(i).getPost_description());
         holder.forum_post_num_upvotes.setText(forumModel.get(i).getNum_upvotes().toString());
 
         holder.forum_post_upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                forumModel.get(i).num_upvotes = ~(forumModel.get(i).num_upvotes);
-
-                //Server side upvote count to be updated
-                notifyDataSetChanged();
-
+                holder.forum_post_upvote.setColorFilter(context.getResources().getColor(R.color.colorSecondary));
+                // TODO: Increase upvote number in database
             }
         });
 
-        holder.forum_post_cardview.setOnClickListener(new View.OnClickListener() {
+        holder.forum_post_comments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Connects to a specific forum post
-
+                Intent intent = new Intent(context,PostActivity.class);
+                context.startActivity(intent);
             }
         });
-
-
     }
 
     @Override

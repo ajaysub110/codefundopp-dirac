@@ -9,7 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class ChoiceFragmentPagerAdapter extends FragmentPagerAdapter {
 
     final int PAGE_COUNT = 2;
-    private String tabTitles[] = new String[] {"Chats", "Forums"};
+    private String tabTitles[] = new String[] {"Forums","Chats"};
     private Context context;
 
     public ChoiceFragmentPagerAdapter(FragmentManager fm, Context context) {

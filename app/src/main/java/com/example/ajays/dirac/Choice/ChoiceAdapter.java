@@ -43,10 +43,10 @@ public class ChoiceAdapter extends RecyclerView.Adapter<ChoiceViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 switch (page){
-                    case 1:
+                    case 2:
                         intent = new Intent(context,ChatActivity.class);
                         break;
-                    case 2:
+                    case 1:
                         intent = new Intent(context,ForumActivity.class);
                         break;
                 }

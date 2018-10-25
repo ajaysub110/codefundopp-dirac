@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ajays.dirac.ResourceAllocation.ResourcesActivity"
+    tools:ignore="ExtraText">
+
+    <item
+        android:id="@+id/food_graph_view"
+
+        android:title="Food"
+        />
+    <item android:id="@+id/medical_graph_view"
+        android:title="Medical">
+        <menu
+            android:id="@+id/medical_submenu">
+
+        </menu>
+
+
+    </item>
+
+
+    <item
+        android:id="@+id/other_graph_view"
+        android:title="Other Necessities">
+        <menu
+            android:id="@+id/other_submenu">
+
+        </menu>
+
+    </item>
+</menu>

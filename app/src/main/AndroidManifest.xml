@@ -11,6 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Forum.ForumActivity"
             android:label="@string/app_name"
@@ -20,9 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Forum.PostPop"
-            android:theme="@style/AppTheme.CustomTheme" />
-        <activity
             android:name=".Chat.ChatActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
         <activity android:name=".MainActivity">
@@ -30,18 +32,14 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ResourceAllocation.ResourcesActivity"
-            android:label="@string/title_activity_resources"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        ><activity android:name=".ResourceAllocation.ResourceAddPop"
-        android:label="ResourceAddPop"
-        android:theme="@style/AppTheme.CustomTheme"></activity>
-        <activity android:name=".ResourceAllocation.PopulationAddPop"
-            android:label="PopulationAddPop"
-            android:theme="@style/AppTheme.CustomTheme"></activity>
+        <activity android:name=".Post.PostActivity"></activity>
+        <activity android:name=".ResourceAllocation.ResourcesActivity"></activity>
+        <activity android:name=".ResourceAllocation.PopulationAddPop"></activity>
+        <activity android:name=".ResourceAllocation.ResourceAddPop"></activity>
     </application>
+
 
 </manifest>
