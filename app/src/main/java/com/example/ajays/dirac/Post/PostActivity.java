@@ -1,5 +1,7 @@
 package com.example.ajays.dirac.Post;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,10 +10,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ajays.dirac.Forum.ForumActivity;
 import com.example.ajays.dirac.Forum.ForumAdapter;
 import com.example.ajays.dirac.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Comment;
 
@@ -23,9 +28,10 @@ public class PostActivity extends AppCompatActivity {
     RecyclerView comments_rv;
     EditText comment_et;
     ImageButton send_btn;
-
+    FirebaseDatabase database;
     CommentsAdapter commentsAdapter;
-    ArrayList<String> commentList;
+    ArrayList<String> commentList = new ArrayList<String>();
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,21 +44,35 @@ public class PostActivity extends AppCompatActivity {
         comment_et = findViewById(R.id.comment_et);
         send_btn = findViewById(R.id.send_btn);
 
-        comments_rv.setLayoutManager(new LinearLayoutManager(PostActivity.this,LinearLayoutManager.VERTICAL,false));
-        comments_rv.setHasFixedSize(true);
+        database = FirebaseDatabase.getInstance();
+        sp = this.getSharedPreferences("login", MODE_PRIVATE);
 
-        commentsAdapter = new CommentsAdapter(this,commentList);
-        comments_rv.setAdapter(commentsAdapter);
+        title_tv.setText(getIntent().getStringExtra("title"));
+        description_tv.setText(getIntent().getStringExtra("description"));
+
+        commentList = getIntent().getStringArrayListExtra("comments");
+        DatabaseReference data_ref = database.getReference("posts/"+sp.getString("region",null)+"/0/comments/");
 
         send_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String text = comment_et.getText().toString();
                 if (text.length() > 0) {
-                    // TODO: Save comment to firebase
+                    data_ref.child(Integer.toString(commentList.size())).setValue(text);
+                    commentList.add(text);
                     comment_et.getText().clear();
                 }
             }
         });
+
+        setAdapter();
+    }
+
+    private void setAdapter(){
+        comments_rv.setLayoutManager(new LinearLayoutManager(PostActivity.this,LinearLayoutManager.VERTICAL,false));
+        comments_rv.setHasFixedSize(true);
+
+        commentsAdapter = new CommentsAdapter(this,commentList);
+        comments_rv.setAdapter(commentsAdapter);
     }
 }

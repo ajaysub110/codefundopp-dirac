@@ -3,6 +3,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -60,7 +61,6 @@ public class ForumAdapter extends RecyclerView.Adapter<ForumViewHolder>{
         holder.forum_post_upvote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Increase upvote number in database
                 DatabaseReference data_ref = database.getReference("posts/"+ sp.getString("region",null)+'/');
 
                 data_ref.child(Integer.toString(i)).child("num_upvotes").addValueEventListener(new ValueEventListener() {
@@ -94,6 +94,11 @@ public class ForumAdapter extends RecyclerView.Adapter<ForumViewHolder>{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,PostActivity.class);
+                ForumModel singlePost = forumModel.get(i);
+                intent.putExtra("title",singlePost.post_title);
+                intent.putExtra("description",singlePost.post_description);
+                intent.putExtra("num_upvotes",singlePost.num_upvotes);
+                intent.putExtra("comments",singlePost.getComments());
                 context.startActivity(intent);
             }
         });

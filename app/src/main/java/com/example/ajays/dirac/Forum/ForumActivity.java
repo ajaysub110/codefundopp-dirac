@@ -5,8 +5,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,10 +23,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class ForumActivity extends Activity {
+public class ForumActivity extends FragmentActivity {
 
     TextView forum_main_tv;
     RecyclerView forum_main_rv;
+    Button add_post_btn;
     ArrayList<ForumModel> forum_list = new ArrayList<>();
     ForumAdapter forum_main_rv_adapter;
     private ChoiceModel forumObject;
@@ -39,6 +43,7 @@ public class ForumActivity extends Activity {
 
         forum_main_tv = findViewById(R.id.forum_main_title);
         forum_main_rv = findViewById(R.id.forum_main_list);
+        add_post_btn = findViewById(R.id.add_post_btn);
 
         forumObject = (ChoiceModel) this.getIntent().getSerializableExtra("chatOrForumChosen");
 
@@ -46,6 +51,18 @@ public class ForumActivity extends Activity {
 
         database = FirebaseDatabase.getInstance();
         sp=this.getSharedPreferences("login", MODE_PRIVATE);
+
+        add_post_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("post_number",forum_list.size());
+                bundle.putString("region",sp.getString("region",null));
+                AddPostDialogFragment newFragment = new AddPostDialogFragment();
+                newFragment.setArguments(bundle);
+                newFragment.show(getSupportFragmentManager(),"add_post");
+            }
+        });
 
         DatabaseReference data_ref=database.getReference("posts/"+sp.getString("region",null)+'/');
         Toast.makeText(ForumActivity.this, data_ref.toString(), Toast.LENGTH_SHORT).show();
@@ -77,12 +94,6 @@ public class ForumActivity extends Activity {
 
             }
         });
-
-        /*
-        for(int i=0;i<30;i++){
-            forum_list.add(new ForumModel("Post Title " + i,"Description "+i,0));
-        }
-        */
 
     }
 
